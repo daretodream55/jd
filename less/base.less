@@ -1,0 +1,125 @@
+/* 定义全局变量 */
+@mainColor: #de181b;
+@border-color: #ccc;
+/* 公共的样式放到base.less里面 */
+* {
+    margin: 0rem;
+    padding: 0rem;
+    /* 防止边框padding超出页面宽度出现滚动条 */
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    color: #666;
+    text-decoration: none;
+    /*一般移动端清除a的点击高亮 透明就表示去掉*/
+    -webkit-tap-highlight-color: transparent;
+}
+input {
+    border: none;
+    outline: none;
+    /*清除移动端默认的表单样式*/
+    -webkit-appearance: none;
+}
+img {
+    /* 解决图片0.08108108108108109rem的间距 */
+    vertical-align: middle;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/* 头部 */
+#header {
+    top:0rem;
+    display: flex;
+    background-color: rgba(222, 24, 27,0.5);
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 1.2162162162162162rem;
+    .logo {
+        height: 1.2162162162162162rem;
+        width: 2.1621621621621623rem;
+        background: url(../images/sprites.png);
+        background-position: 0 -2.8378378378378377rem;
+        background-size: 5.405405405405405rem 5.405405405405405rem;
+        padding: 0.13513513513513514rem 0.2702702702702703rem;
+        // 切换背景模式
+        background-origin: content-box;
+        // 切割背景图
+        background-clip: content-box;
+    }
+    form {
+        position: relative;
+        flex: 1;
+        input {
+            width: 100%;
+            height: 0.8108108108108109rem;
+            border-radius: 0.40540540540540543rem;
+            padding: 0.13513513513513514rem 0.9459459459459459rem;
+            margin-top: 0.13513513513513514rem;
+        }
+        i {
+            position: absolute;
+            background: url(../images/sprites.png);
+            background-position: -1.6216216216216217rem -2.972972972972973rem;
+            background-size: 5.405405405405405rem 5.405405405405405rem;
+            // 切换背景模式
+            background-origin: content-box;
+            // 切割背景图
+            background-clip: content-box;
+            width: 0.5405405405405406rem;
+            height: 0.5405405405405406rem;
+            left:0.2702702702702703rem;
+            top:0.2702702702702703rem;
+        }
+    }
+    .login {
+        width: 1.3513513513513513rem;
+        height: 0.9459459459459459rem;
+        font-size: 0.3783783783783784rem;
+        color: #fff;
+        line-height: 0.9459459459459459rem;
+        text-align: center;
+    }
+}
+.bt{
+    border-top:0.02702702702702703rem solid @border-color;
+}
+.bb{
+    border-bottom:0.02702702702702703rem solid @border-color;
+}
+.br{
+    border-right:0.02702702702702703rem solid @border-color;
+}
+.bl{
+    border-left:0.02702702702702703rem solid @border-color;
+}
+//底部
+footer{
+position: fixed;
+width: 100%;
+height: 1.3513513513513513rem;
+bottom: 0rem;
+left:0rem;
+z-index: 999;
+background-color: #fff;
+ul{
+    display: flex;
+    li{
+        flex: 1;
+        a{
+            display: block;
+            text-align: center;
+            img{
+                width: 1.7567567567567568rem;
+                height: 1.4864864864864864rem;
+            }
+        }
+    }
+}
+}

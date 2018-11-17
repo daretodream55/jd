@@ -1,0 +1,150 @@
+/* 在首页的index.less去导入公共样式文件 */
+@import 'base.less';
+@mainColor: #de181b;
+@border-color: #ccc;
+// 轮播图区域
+.slider {
+.swiper-pagination-bullet-active{
+    background-color: #fff;
+}
+img {
+    width: 100%;
+}
+}
+//导航栏
+#nav {
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        width: 25%;
+        a {
+            display: block;
+            padding: 0.13513513513513514rem 0.2702702702702703rem;
+            text-align: center;
+            img {
+                width: 1.0810810810810811rem;
+                height: 1.0810810810810811rem;
+            }
+            p {
+                margin-top: 0.2702702702702703rem;
+            }
+        }
+    }
+}
+}
+main{
+    background: #f5f5f5;
+    padding: 0.2702702702702703rem;
+    //秒杀
+    #seckill{
+    background-color: #fff;
+    box-shadow: 0rem 0rem 0.02702702702702703rem @border-color;
+    .seckill-title{
+        height: 0.8108108108108109rem;
+        line-height: 0.8108108108108109rem;
+        border-bottom: 0.02702702702702703rem solid @border-color;
+        img{
+            width: 0.5405405405405406rem;
+            height: 0.6756756756756757rem;
+            margin-left: 0.2702702702702703rem;
+            margin-bottom: 0.13513513513513514rem;
+        }
+        .now{
+            color: @mainColor;
+            margin:0.13513513513513514rem 0.13513513513513514rem;
+        }
+        .seckill-time{
+            span{
+                width: 0.40540540540540543rem;
+                height: 0.40540540540540543rem;
+                line-height: 0.40540540540540543rem;
+                margin-top:0.13513513513513514rem;
+                background-color: #000;
+                color: #fff;
+                text-align: center;
+                display: inline-block;
+                &:nth-child(3n){
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+        .more{
+            float: right;
+            padding: 0rem 0.13513513513513514rem;
+        }
+    }
+    .seckill-content{
+        ul{
+            display: flex;
+            li{
+                flex: 1;
+                &+li{
+                    border-left: 0.02702702702702703rem solid @border-color;
+                }
+                a{
+                    display: block;
+                    text-align: center;
+                    font-size: 0.32432432432432434rem;
+                    img{
+                        width: 100%;
+                    }
+                    p{
+                        color: @mainColor;
+                    }
+                }
+            }
+        }
+    }
+}
+//超市
+.market{
+margin-top:0.2702702702702703rem;
+background-color: #fff;
+.title{
+    border-bottom: 0.02702702702702703rem solid @border-color;
+    h4{
+        font-weight: normal;
+        padding-left: 0.6756756756756757rem;
+        line-height: 0.8108108108108109rem;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top:0.21621621621621623rem;
+            left:0.2702702702702703rem;
+            width: 0.13513513513513514rem;
+            height: 0.40540540540540543rem;
+            background-color: @mainColor;
+        }
+    }
+}
+.content{
+    display: flex;
+    .left{
+        flex: 1;
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .right{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        >a{
+            img{
+                flex: 1;
+                width: 100%;
+            }
+        }
+    }
+}
+}
+}
+body{
+    padding-bottom: 1.3513513513513513rem;
+}
